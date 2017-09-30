@@ -7,6 +7,5 @@ clone:
 pipeline:
   gcc:
     image: gcc
-    pull: true
     commands:
       - gcc -Wall -o shift shift.c
