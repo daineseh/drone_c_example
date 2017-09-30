@@ -30,3 +30,4 @@ pipeline:
       - ls -al
     when:
       branch: [ master, develop ]
+      event: push
