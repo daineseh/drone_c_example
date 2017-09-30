@@ -7,10 +7,13 @@ clone:
 pipeline:
   gcc:
     image: gcc
-    secrets: [ aaa ]
+    secrets:
+      - source: aaa
+        target: abc
     commands:
       - echo Starting compile.
       - gcc -Wall -o shift shift.c
       - ./shift
       - echo $AAA
+      - echo $ABC
       - echo $PATH
