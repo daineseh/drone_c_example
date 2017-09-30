@@ -43,7 +43,7 @@ pipeline:
     image: appleboy/drone-ssh
     host: bluebobo.no-ip.org
     username: pi
-    secrets: key
+    secrets: [ key ] 
     script:
       - echo This is ARCH PI
       - touch a.txt
