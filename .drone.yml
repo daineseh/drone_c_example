@@ -18,16 +18,16 @@ pipeline:
       - echo $ABC
       - echo $PATH
 
-   master:
-     image: gcc
-     commands:
-       - echo master
-     when:
-       branch: master
+  master:
+    image: gcc
+    commands:
+      - echo master
+    when:
+      branch: master
 
-   develop:
-     image: gcc
-     commands:
-       - echo develop
-     when:
-       branch: develop
+  develop:
+    image: gcc
+    commands:
+      - echo develop
+    when:
+      branch: develop
