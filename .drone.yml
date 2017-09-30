@@ -29,5 +29,4 @@ pipeline:
       - touch a.txt
       - ls -al
     when:
-      branch: [ master, develop]
-      event: pull
+      branch: [ master, develop ]
