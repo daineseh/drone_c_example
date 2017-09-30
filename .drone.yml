@@ -44,9 +44,7 @@ pipeline:
     host: bluebobo.no-ip.org
     port: 9282
     username: pi
-    secrets:
-      - source: key
-      - target: ssh_key
+    secrets: [ ssh_key ]
     script:
       - echo This is ARCH PI
       - touch a.txt
