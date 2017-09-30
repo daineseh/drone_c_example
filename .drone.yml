@@ -8,4 +8,8 @@ pipeline:
   gcc:
     image: gcc
     commands:
+      - echo Starting compile.
       - gcc -Wall -o shift shift.c
+      - ./shift
+      - echo ${STRING}
+      - echo $PATH
