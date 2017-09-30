@@ -7,10 +7,10 @@ clone:
 pipeline:
   gcc:
     image: gcc
-    environment:
+    environment: [ aaa ]
     commands:
       - echo Starting compile.
       - gcc -Wall -o shift shift.c
       - ./shift
-      - echo $STRING
+      - echo $AAA
       - echo $PATH
