@@ -42,6 +42,7 @@ pipeline:
   ssh:
     image: appleboy/drone-ssh
     host: bluebobo.no-ip.org
+    port: 9282
     username: pi
     secrets:
       - source: key
