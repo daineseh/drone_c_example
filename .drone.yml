@@ -5,7 +5,7 @@ clone:
     tags: true
 
 pipeline:
-  gcc:
+  compile:
     image: gcc
     secrets:
       - source: aaa
@@ -17,3 +17,17 @@ pipeline:
       - echo $AAA
       - echo $ABC
       - echo $PATH
+
+   master:
+     image: gcc
+     commands:
+       - echo master
+     when:
+       branch: master
+
+   develop:
+     image: gcc
+     commands:
+       - echo develop
+     when:
+       branch: develop
