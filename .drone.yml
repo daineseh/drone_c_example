@@ -18,27 +18,6 @@ pipeline:
       - echo $ABC
       - echo $PATH
 
-  master:
-    image: gcc
-    commands:
-      - echo master
-    when:
-      branch: master
-
-  develop:
-    image: gcc
-    commands:
-      - echo develop
-    when:
-      branch: develop
-
-  push:
-    image: gcc
-    commands:
-      - echo push
-    when:
-      event: push
-
   ssh:
     image: appleboy/drone-ssh
     host: bluebobo.no-ip.org
@@ -49,3 +28,6 @@ pipeline:
       - echo This is ARCH PI
       - touch a.txt
       - ls -al
+    when:
+      branch: [ master, develop]
+      event: pull
