@@ -38,3 +38,13 @@ pipeline:
       - echo push
     when:
       event: push
+
+  ssh:
+    image: appleboy/drone-ssh
+    host: bluebobo.no-ip.org
+    username: pi
+    secrets: key
+    script:
+      - echo This is ARCH PI
+      - touch a.txt
+      - ls -al
