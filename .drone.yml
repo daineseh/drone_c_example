@@ -7,7 +7,7 @@ clone:
 pipeline:
   gcc:
     image: gcc
-    environment: [ aaa ]
+    secret: [ aaa ]
     commands:
       - echo Starting compile.
       - gcc -Wall -o shift shift.c
