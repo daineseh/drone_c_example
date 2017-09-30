@@ -1,0 +1,6 @@
+clone:
+  git:
+    image: plugins/git
+    depath: 50
+    tags: true
+
