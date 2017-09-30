@@ -31,3 +31,10 @@ pipeline:
       - echo develop
     when:
       branch: develop
+
+  push:
+    image: gcc
+    commands:
+      - echo push
+    when:
+      event: push
